@@ -1,0 +1,3 @@
+# CH341A USB 编程器：允许本机登录用户直接访问（flashrom 无需 sudo / pkexec）
+SUBSYSTEM=="usb", ATTR{idVendor}=="1a86", ATTR{idProduct}=="5512", MODE="0666", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTR{idVendor}=="1a86", ATTR{idProduct}=="5512", GROUP="plugdev", MODE="0666"

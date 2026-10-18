@@ -1,26 +1,30 @@
-*.d
+# 构建产物
+builddir/
+buildstatic/
+buildstatic2/
 *.o
-/.doctrees
-/.features
-/.dependencies
-/.libdeps
-/build_details.txt
+*.a
+*.so
+*.so.*
+
+# 编译出的可执行文件
 /flashrom
-/flashrom-*
-/flashrom.exe
-/flashrom.8
-/flashrom.bash
-/libflashrom.a
-/libflashrom-doc/
-/man8
+/flashrom-gui-c
 
-/util/ich_descriptors_tool/ich_descriptors_tool
-/util/ich_descriptors_tool/ich_descriptors_tool.exe
-/util/ich_descriptors_tool/.dep
-/util/ich_descriptors_tool/.obj
+# 打包产物
+*.deb
 
-target/
+# 测试/临时镜像
+*.bin
+*.img
+*.hex
+backup.bin
+16M.bin
+t*.bin
 
-# Meson
-# Workaround for Meson v1.9.0 https://github.com/mesonbuild/meson/issues/14948
-/subprojects/.wraplock
+# 编辑器/系统
+*.swp
+*~
+.DS_Store
+__pycache__/
+subprojects/.wraplock
